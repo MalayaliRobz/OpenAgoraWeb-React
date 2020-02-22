@@ -12,7 +12,7 @@ class App extends Component {
       <Router>
         <div className="full">
           <Route exact path="/" component={Index} />
-          <Route path="/meeting" component={Meeting} />
+          <Route path="/meeting/:channelId" component={Meeting} />
         </div>
       </Router>
     )
