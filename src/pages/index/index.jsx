@@ -44,11 +44,11 @@ class Index extends React.Component {
       return
     }
     console.log(this.state)
-    Cookies.set('channel', this.state.channel)
-    Cookies.set('baseMode', this.state.baseMode)
-    Cookies.set('transcode', this.state.transcode)
-    Cookies.set('attendeeMode', this.state.attendeeMode)
-    Cookies.set('videoProfile', this.state.videoProfile)
+    // Cookies.set('channel', this.state.channel)
+    // Cookies.set('baseMode', this.state.baseMode)
+    // Cookies.set('transcode', this.state.transcode)
+    // Cookies.set('attendeeMode', this.state.attendeeMode)
+    // Cookies.set('videoProfile', this.state.videoProfile)
     window.location.hash = `meeting/${this.state.channel}`
   }
 

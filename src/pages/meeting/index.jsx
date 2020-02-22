@@ -8,11 +8,11 @@ import { AGORA_APP_ID } from "../../agora.config";
 class Meeting extends React.Component {
   constructor(props) {
     super(props);
-    this.videoProfile = Cookies.get("videoProfile").split(",")[0] || "480p_4";
-    this.channel = this.props.match.params.channelId || Cookies.get("channel") || "test";
-    this.transcode = Cookies.get("transcode") || "interop";
-    this.attendeeMode = Cookies.get("attendeeMode") || "video";
-    this.baseMode = Cookies.get("baseMode") || "avc";
+    this.videoProfile = "480p_4";
+    this.channel = this.props.match.params.channelId || "test";
+    this.transcode = "interop";
+    this.attendeeMode = "audio-only";
+    this.baseMode = "avc";
     this.appId = AGORA_APP_ID;
     if (!this.appId) {
       return alert("Get App ID first!");
