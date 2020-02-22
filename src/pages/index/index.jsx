@@ -15,7 +15,7 @@ class Index extends React.Component {
       channel: '',
       baseMode: 'avc',
       transcode: 'interop',
-      attendeeMode: 'video',
+      attendeeMode: 'audio-only',
       videoProfile: '480p_4',
 
     }
@@ -60,8 +60,8 @@ class Index extends React.Component {
           <section className="login-wrapper">
             <div className="login-header">
               <img src={require('../../assets/images/ag-logo.png')} alt="" />
-              <p className="login-title">AgoraWeb v2.1</p>
-              <p className="login-subtitle">Powering Real-Time Communications</p>
+              <p className="login-title">Ring Ring 2.0</p>
+              <p className="login-subtitle">...</p>
             </div>
             <div className="login-body">
               <div className="columns">
@@ -71,35 +71,35 @@ class Index extends React.Component {
               </div>
               <div className="columns">
                 <div className="column is-7">
-                  <BaseOptions
+                  {/* <BaseOptions
                     onChange={val => this.setState({ baseMode: val })}>
-                  </BaseOptions>
+                  </BaseOptions> */}
                 </div>
                 <div className="column is-5">
-                  <AdvancedOptions
+                  {/* <AdvancedOptions
                     onRadioChange={val => this.setState({ transcode: val })}
                     onSelectChange={val => this.setState({ videoProfile: val })}>
-                  </AdvancedOptions>
+                  </AdvancedOptions> */}
                 </div>
               </div>
               <div className="columns">
                 <div className="column">
                   <div id="attendeeMode" className="control">
-                    <label className="radio">
+                    {/* <label className="radio">
                       <input onChange={e => this.setState({ attendeeMode: e.target.value })}
                         value="video" type="radio"
-                        name="attendee" defaultChecked />
+                        name="attendee" />
                       <span className="radio-btn">
                       </span>
                       <span className="radio-img video">
                       </span>
                       <span className="radio-msg">Video Call : join with video call</span>
-                    </label>
-                    <br />
+                    </label> */}
+                    {/* <br /> */}
                     <label className="radio">
                       <input onChange={e => this.setState({ attendeeMode: e.target.value })}
                         value="audio-only" type="radio"
-                        name="attendee" />
+                        name="attendee" defaultChecked/>
                       <span className="radio-btn">
                       </span>
                       <span className="radio-img audio">
@@ -107,7 +107,7 @@ class Index extends React.Component {
                       <span className="radio-msg">Audio-only : join with audio call</span>
                     </label>
                     <br />
-                    <label className="radio">
+                    {/* <label className="radio">
                       <input onChange={e => this.setState({ attendeeMode: e.target.value })}
                         value="audience" type="radio"
                         name="attendee" />
@@ -116,7 +116,7 @@ class Index extends React.Component {
                       <span className="radio-img audience">
                       </span>
                       <span className="radio-msg">Audience : join as an audience</span>
-                    </label>
+                    </label> */}
                   </div>
                 </div>
               </div>
@@ -135,8 +135,6 @@ class Index extends React.Component {
             <span>Powered By Agora</span>
           </a>
           <div>
-            <span>Interested in Agora video call SDK? Contact </span>
-            <span className="ag-contact">sales@agora.io</span>
           </div>
         </div>
       </div>
