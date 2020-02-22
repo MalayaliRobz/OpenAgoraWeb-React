@@ -49,7 +49,7 @@ class Index extends React.Component {
     // Cookies.set('transcode', this.state.transcode)
     // Cookies.set('attendeeMode', this.state.attendeeMode)
     // Cookies.set('videoProfile', this.state.videoProfile)
-    window.location.hash = `meeting/${this.state.channel}`
+    window.location.hash = `meeting/${this.state.channel}?attendeeMode=${this.state.attendeeMode}`
   }
 
   render() {
@@ -85,7 +85,7 @@ class Index extends React.Component {
               <div className="columns">
                 <div className="column">
                   <div id="attendeeMode" className="control">
-                    {/* <label className="radio">
+                    <label className="radio">
                       <input onChange={e => this.setState({ attendeeMode: e.target.value })}
                         value="video" type="radio"
                         name="attendee" />
@@ -94,8 +94,8 @@ class Index extends React.Component {
                       <span className="radio-img video">
                       </span>
                       <span className="radio-msg">Video Call : join with video call</span>
-                    </label> */}
-                    {/* <br /> */}
+                    </label>
+                    <br />
                     <label className="radio">
                       <input onChange={e => this.setState({ attendeeMode: e.target.value })}
                         value="audio-only" type="radio"

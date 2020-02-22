@@ -11,13 +11,23 @@ class Meeting extends React.Component {
     this.videoProfile = "480p_4";
     this.channel = this.props.match.params.channelId || "test";
     this.transcode = "interop";
-    this.attendeeMode = "audio-only";
+    this.attendeeMode = this.getAttendeeModeParam(this.props.location.search) || "audio-only";
     this.baseMode = "avc";
     this.appId = AGORA_APP_ID;
     if (!this.appId) {
       return alert("Get App ID first!");
     }
     this.uid = undefined;
+  }
+
+  getAttendeeModeParam(queryString) {
+    try {
+      let searchParams = new URLSearchParams(queryString);
+      return searchParams.get("attendeeMode");
+    }
+    catch {
+      return null;
+    }
   }
 
   render() {
