@@ -111,7 +111,7 @@ class AgoraCanvas extends React.Component {
         else {
           let picWidth = window.screen.width < 768 ? 8 : 4;
 
-          dom.setAttribute('style', `grid-area: span 3/span ${picWidth}/${4 + 3 * index}/25;
+          dom.setAttribute('style', `grid-area: span 3/span ${picWidth}/${index === 1 ? 4 : (4 + 3 * index)}/25;
                     z-index:1;width:calc(100% - 20px);height:calc(100% - 20px)`)
         }
 
