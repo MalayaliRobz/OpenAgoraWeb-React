@@ -105,7 +105,7 @@ class AgoraCanvas extends React.Component {
           canvas.appendChild(dom)
           item.play('ag-item-' + id)
         }
-        if (index === 1) { // occupy full screen video for second stream
+       if (index === no - 2) { // occupy full screen video for second stream
           dom.setAttribute('style', `grid-area: span 12/span 24/13/25`)
         }
         else {
