@@ -1,5 +1,4 @@
 import React from 'react'
-import * as Cookies from 'js-cookie'
 
 import '../../assets/fonts/css/icons.css'
 import Validator from '../../utils/Validator'
